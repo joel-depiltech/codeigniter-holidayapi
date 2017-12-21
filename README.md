@@ -1,5 +1,5 @@
 # CodeIgniter Holiday API
-[CodeIgniter](https://www.codeigniter.com) third-party library deals with [Holiday API](https://holidayapi.com) based an official PHP library.
+[CodeIgniter](https://www.codeigniter.com) third-party library deals with [Holiday API](https://holidayapi.com) based on [official PHP library](https://github.com/joshtronic/php-holidayapi) .
 
 ## Installation
 
@@ -9,20 +9,26 @@ Note that following steps assume that you have correctly installed Composer and 
 
 1. Make sure you already use Composer auto-loader in your config file (application/config/config.php)
 
-```php $config['composer_autoload'] = TRUE; // or a custom path as 'vendor/autoload.php' ```
+```php
+$config['composer_autoload'] = TRUE; // or a custom path as 'vendor/autoload.php'
+```
 
 2. Include this **package** with Loader library
 
-```php $this->load->add_package_path(APPPATH . 'third_party/holidayapi'); ```
+```php
+$this->load->add_package_path(APPPATH . 'third_party/holidayapi');
+```
 
 3. Include this **library** with Loader library
 
-```php $this->load->library('HolidayAPI'); ```
+```php
+$this->load->library('HolidayAPI');
+```
 
 
 ## Usage
 
-A simple to call to holidays method :
+Just a simple call to holidays() method :
 
 ```php
 <?php
