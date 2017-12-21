@@ -1,0 +1,19 @@
+{
+    "name": "codeigniter/holidayapi",
+    "description": "CodeIgniter third-party library deals with Holiday API based an official PHP library",
+    "type": "codeigniter-third-party",
+    "keywords": [ "holiday", "holidays", "holidayapi", "holiday-api", "codeigniter", "codeigniter-library", "api" ],
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "authors": [
+        {
+            "name": "Joël Gaujard",
+            "email": "joel@depiltech.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "joshtronic/php-holidayapi": "^1.0",
+        "composer/installers": "^1.4"
+    }
+}
