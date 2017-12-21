@@ -1,4 +1,9 @@
 # CodeIgniter Holiday API
+
+[![Latest Stable Version](https://poser.pugx.org/joel-depiltech/codeigniter-holidayapi/v/stable.svg)](https://packagist.org/packages/joel-depiltech/codeigniter-holidayapi)
+[![License](https://poser.pugx.org/joel-depiltech/codeigniter-holidayapi/license)](https://packagist.org/packages/joel-depiltech/codeigniter-holidayapi)
+
+
 [CodeIgniter](https://www.codeigniter.com) third-party library deals with [Holiday API](https://holidayapi.com) based on [official PHP library](https://github.com/joshtronic/php-holidayapi) .
 
 ## Installation
