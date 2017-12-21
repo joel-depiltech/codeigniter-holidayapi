@@ -8,9 +8,11 @@
 
 ## Installation
 
+_Note that following steps assume that you have correctly installed Composer and configured CodeIgniter on your server._
+
 Please use [Composer](https://getcomposer.org) to install it and include it as a third-party [package](https://www.codeigniter.com/user_guide/libraries/loader.html#application-packages) in your CodeIgniter application.
 
-Note that following steps assume that you have correctly installed Composer and configured CodeIgniter on your server.
+`composer require joel-depiltech/codeigniter-holidayapi`
 
 1. Make sure you already use Composer auto-loader in your config file (application/config/config.php)
 
