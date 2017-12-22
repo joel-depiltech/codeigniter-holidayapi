@@ -97,7 +97,7 @@ class HolidayAPI
             $this->setKey($test_api_key);
         }
         else {
-            throw new OutOfBoundsException('Unknown "' . $environment . '" Holiday API environment.');
+            throw new OutOfRangeException('Unknown "' . $environment . '" Holiday API environment.');
         }
     }
 
@@ -116,26 +116,34 @@ class HolidayAPI
      *
      * @param string $domain
      */
-    public function holidays($country = 'US', $year = NULL)
+    public function holidays(
+        $country = 'US',
+        $year = NULL,
+        $month = NULL,
+        $day = NULL,
+        $previous = FALSE,
+        $upcoming = FALSE,
+        $public = TRUE,
+        $pretty = TRUE
+    )
     {
-        $year = empty($year) ? date('Y') : $year;
-
         $parameters = array(
             // Required
-            'key' => $this->getKey(),
-            'country' => $country,
-            'year'    => $year,
+            'key'       => $this->getKey(),
+            'country'   => $country,
+            'year'      => empty($year) ? date('Y') : $year,
             // Optional
-            //'month'    => 12,
-            //'day'      => 25,
-            //'previous' => true,
-            //'upcoming' => true,
-            'public'   => true,
-            'pretty'   => false,
+            'month'     => empty($month) ? NULL : $month,
+            'day'       => empty($day) ? NULL : $day,
+            'previous' => (bool) $previous,
+            'upcoming' => (bool) $upcoming,
+            'public'   => (bool) $public,
+            'pretty'   => (bool) $pretty
         );
 
         $response = $this->hapi->holidays($parameters);
-        ptr($response, __METHOD__);
+
+        return $response;
     }
 
 }
