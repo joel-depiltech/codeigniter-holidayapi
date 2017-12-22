@@ -32,13 +32,35 @@ $this->load->add_package_path(APPPATH . 'third_party/holidayapi');
 $this->load->library('HolidayAPI');
 ```
 
+4. Configure your **api keys** in config file (config/holidayapi.php)
+
+```php
+$config['holidayapi_test_api_key'] = '058f4506-caf0-4bdd-b52b-cbc98e20e02e';
+$config['holidayapi_live_api_key'] = '*** Fill in your own Live API key ***';
+```
+
 
 ## Usage
 
-Just a simple call to holidays() method :
+### Simple call
+
+By default, fetch all holidays of this year for USA :
 
 ```php
 <?php
-$holidays = $this->holidayapi->holidays('FR');
+$this->load->library('HolidayAPI');
+$holidays = $this->holidayapi->holidays();
+print_r($holidays);
+```
+
+
+### Complete call
+
+A example to fetch all upcoming holidays for France from Christmas to end of 2018 with a specific API key :
+
+```php
+<?php
+$this->load->library('HolidayAPI', array('holidayapi_live_api_key' => '** An other API key **'));
+$holidays = $this->holidayapi->holidays('FR', 2018, 12, 25, FALSE, TRUE);
 print_r($holidays);
 ```
